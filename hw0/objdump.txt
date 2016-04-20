@@ -1,0 +1,12 @@
+What file format is used for this binary? And what architecture is it compiled for?
+The file format is file format elf64-x86-64.
+The architecture it is compiled for is i386:x86-64.
+
+What are some of the names of segment/sections you find?
+Some sections/segments: .interp, .comment, .data, .debug_info, .dynsym, .dynstr, .init, etc.
+
+What segment/section contains main (the function) and what is the address of main? (It should be the same as what you saw in gdb)
+The section that contains the main function is .text. The address of main is 0x4006dd.
+
+Do you see the stack segment anywhere? What about the heap?
+We don’t see a stack or heap segment anywhere, because heap and stack aren’t part of the executable file. Both are dynamically allocated by the OS (loaded into virtual memory), and not fixed during compilation time. 
